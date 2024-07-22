@@ -1,0 +1,22 @@
+{
+	"name": "create-roseview-app",
+	"version": "0.0.1",
+	"description": "A cli tool for creating roseview apps >3",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"bin": {
+		"create-roseview-app": "./index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oarabiledev/create-roseview-app.git"
+	},
+	"author": "Oarabile Koore",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/oarabiledev/create-roseview-app/issues"
+	},
+	"homepage": "https://github.com/oarabiledev/create-roseview-app#readme"
+}
