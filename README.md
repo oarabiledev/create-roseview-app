@@ -4,4 +4,4 @@
 
 A quick way to start building apps with roseview.js framework, cli spins up a roseview-app with recommended project structure and example patterns.
 
-💡 For full documentation on how to use z js, see [roseview Framework Docs](https://github.com/oarabiledev/roseview)
+💡 For full documentation on how to use roseview js, see [roseview Framework Docs](https://github.com/oarabiledev/roseview)
