@@ -2,12 +2,10 @@ import { createLayout, createElement, createApplication, roseConfig } from "./ro
 
 import outlinedButton from "./components/outlinedbtn.js";
 
-export function OnStart() {
-	let layout = createLayout("linear", "center");
+let layout = createLayout("linear", "center");
 
-	let helloWorld = outlinedButton(layout, "Hello World !", "180px", "auto");
+let helloWorld = outlinedButton(layout, "Hello World !", "180px", "auto");
 
-	createApplication(layout);
+createApplication(layout);
 
-	roseConfig.Title = "roseview Framework";
-}
+roseConfig.Title = "roseview Framework";
