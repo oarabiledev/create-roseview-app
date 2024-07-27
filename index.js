@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 const args = process.argv.slice(2);
 const projectName = args[0];
@@ -36,3 +37,20 @@ function copyDirectory(src, dest) {
 copyDirectory(templatePath, projectPath);
 
 console.log(`Project ${projectName} has been created at ${projectPath}`);
+
+// Change to the newly created project directory
+process.chdir(projectPath);
+
+// Initialize a new package.json file if it doesn't exist
+if (!fs.existsSync("package.json")) {
+	execSync("npm init -y", { stdio: "inherit" });
+}
+
+// Install the roseview package and other dependencies
+try {
+	execSync("npm install roseview", { stdio: "inherit" });
+	console.log(`Installed 'roseview' package.`);
+} catch (error) {
+	console.error("Failed to install dependencies:", error);
+	process.exit(1);
+}

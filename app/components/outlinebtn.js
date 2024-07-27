@@ -1,12 +1,13 @@
-import { createElement } from "../roseviewsdk/roseview.core.js";
+import { rsvElement } from "roseview";
 
-const outlinedButton = function (parent, text, width, height) {
-	let btn = createElement(parent, "button", null, width, height);
-	text ? (btn.textContent = text) : null;
+const outlinedButton = function (parent, text, props) {
+	let btn = rsvElement(parent, "button", props);
 	btn.setStyle({
 		border: "2px solid #6200ea",
 		color: "#6200ea",
 		backgroundColor: "transparent",
+		fontFamily: "'Archivo', sans-serif",
+		fontWeight: 500,
 		fontSize: "1rem",
 		textAlign: "center",
 		cursor: "pointer",
@@ -15,11 +16,11 @@ const outlinedButton = function (parent, text, width, height) {
 		fontWeight: 700,
 		transition: "background-color 0.3s, color 0.3s",
 
-		":hover": {
+		"&:hover": {
 			backgroundColor: "#6200ea",
 			color: "white"
 		},
-		":active": {
+		"&:active": {
 			backgroundColor: "#3700b3",
 			borderColor: "#3700b3"
 		},
