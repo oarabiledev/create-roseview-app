@@ -1,8 +1,8 @@
-import { rsvConfig, rsvContainer, rsvElement } from "roseview";
+import { htmlPage, htmlContainer, htmlElement } from "roseview";
 
-let layout = rsvContainer("linear", "center");
+let layout = htmlContainer("linear", "center");
 
-let button = rsvElement(layout, "button", {
+let button = htmlElement(layout, "button", {
 	width: "180px",
 	height: "auto",
 	text: "Hello World 👋"
@@ -38,6 +38,6 @@ button.style({
 	}
 });
 
-rsvConfig.Application(layout);
+htmlPage.App(layout);
 
-rsvConfig.Title = "roseview Framework";
+htmlPage.Title = "roseview Framework";

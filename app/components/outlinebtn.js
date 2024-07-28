@@ -1,7 +1,7 @@
-import { rsvElement } from "roseview";
+import { htmlElement } from "roseview";
 
 const outlinedButton = function (parent, text, props) {
-	let btn = rsvElement(parent, "button", props);
+	let btn = htmlElement(parent, "button", props);
 	btn.setStyle({
 		border: "2px solid #6200ea",
 		color: "#6200ea",
